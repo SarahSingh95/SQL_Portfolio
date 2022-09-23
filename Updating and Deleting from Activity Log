@@ -1,0 +1,17 @@
+CREATE TABLE activity_log (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, activity TEXT, duration_minutes INTEGER);
+
+
+INSERT INTO activity_log (date, activity, duration_minutes) VALUES ("8-1-2022", "Treadmill", 30);
+INSERT INTO activity_log (date, activity, duration_minutes) VALUES ("8-2-2022", "Weight Training", 40);
+INSERT INTO activity_log (date, activity, duration_minutes) VALUES ("8-3-2022", "Elliptical", 30);
+
+SELECT * FROM activity_log;
+
+UPDATE activity_log SET duration_minutes = 45 WHERE id = 2;
+
+SELECT * FROM activity_log;
+
+DELETE FROM activity_log WHERE id = 3;
+
+SELECT * FROM activity_log;
+
